@@ -1,0 +1,15 @@
+<div id="homeContainer" [ngStyle]="{height: componentHeightCssString, opacity: applyTransition ? 1 : 0}" style="overflow: auto; transition: opacity 0.5s; background: linear-gradient(to top, #00cc99 0%, #009999 100%);" *ngIf="componentInitialized">
+    <div class="centered-content" style="flex-direction: column; height: 100%;">
+        <span>
+            <h1 [ngStyle]="{opacity: applyTransition ? 1 : 0}"
+                style="color: whitesmoke; font-size: 5vh; text-align: center; transition: opacity 0.5s; transition-delay: 1s; padding-bottom: 2rem;">
+                Tushar Udayan Tiwari</h1>
+            <h5 [ngStyle]="{opacity: applyTransition ? 1 : 0}"
+                style="color: whitesmoke; transition: opacity 0.5s; transition-delay: 2s; text-align: center; padding-bottom: 2rem;">Full Stack Developer</h5>
+            <h5 [ngStyle]="{opacity: applyTransition ? 1 : 0}"
+                style="color: whitesmoke; transition: opacity 0.5s; transition-delay: 3s; text-align: center; padding-bottom: 2rem;">(Java/Spring, JavaScript/Angular,
+                PHP)</h5>
+        </span>
+        <button type="button" class="btn btn-outline-primary" style="transition: opacity 0.5s; transition-delay: 4s" [ngStyle]="{opacity: applyTransition ? 1 : 0}" routerLink="/bio">More about me</button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.projects-container {
+    transition: opacity 0.5s;
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+    display: flex;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollable-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-container {
+    height: calc(100% - 2rem);
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

@@ -1,0 +1,34 @@
+<div *ngIf="componentInitialized" [ngStyle]="{height: componentHeightCssString, opacity: applyTransition ? 1 : 0}" style="transition: opacity 0.5s;">
+    <div class="bio-timeline-container">
+        <div class="bio" [ngStyle]="{height: isMobileView ? '100%' : '50%'}" *ngIf="!isMobileView || currentMode === BioTimelineModes.BIO">
+            <img src="../../assets/pic.png" alt="Tushar Udayan Tiwari" style="width: 200px; height: 200px; border-radius: 50%;" />
+            <!-- <div style="height: 24px;"></div> -->
+            <div style="padding: 1.5rem 0.5rem 0.5rem 0.5rem;">
+                I am a software developer and have majored in the field of Computer and Communication Engineering, from Manipal
+                Institute of Technology, Manipal, Karnataka, India. I work on full stack development, covering everything from front-end programming, user-application interaction,
+                backend programming (to design servers), and everything in between. I am
+                looking for a job that can provide me with a platform to showcase my skills, and assist in developing industry-leading applications. I
+                believe in the idea of taking the bull by the horns. I do not shy away from challenges, and like to tackle them head on.
+                I would like to put my skills to good use by working at a world-renowned firm, and gain practical
+                knowledge in my field.
+            </div>
+            <button type="button" class="btn btn-outline-dark" *ngIf="isMobileView" (click)="currentMode = BioTimelineModes.TIMELINE">View Timeline&nbsp;<i class="fa fa-caret-down"></i></button>
+        </div>
+        <div class="timeline" [ngStyle]="{height: isMobileView ? '100%' : '50%'}" *ngIf="!isMobileView || currentMode === BioTimelineModes.TIMELINE">
+            <div [ngStyle]="{'display': 'flex', 'flex-direction': 'row', 'justify-content': 'space-between', 'align-items': 'center'}">
+                <h4 [ngStyle]="{'padding': '0', 'margin': 0}">My Timeline:</h4>
+                <button type="button" class="btn btn-link btn-sm" *ngIf="isMobileView" (click)="currentMode = BioTimelineModes.BIO">View Bio&nbsp;<i class="fa fa-caret-up"></i></button>
+            </div>
+            <div class="timeline-container" [ngStyle]="{'flex-direction': isMobileView ? 'column' : 'row', 'height': 'calc(100% - 2rem)'}">
+                <div *ngFor="let timelineDatum of timelineData; let i = index" class="timeline-container" [ngStyle]="{'flex-direction': isMobileView ? 'column' : 'row'}">
+                    <div *ngIf="i !== 0" [ngClass]="{'line-horizontal': !isMobileView, 'line-vertical': isMobileView, 'line': true}"></div>
+                    <div class="circle">
+                        <div style="max-width: 100%;">{{timelineDatum.startYear ? timelineDatum.startYear + ' -' : ''}} {{timelineDatum.endYear}}</div>
+                        <div style="max-width: 100%;">{{timelineDatum.activityName}},</div>
+                        <div style="max-width: 100%;">{{timelineDatum.institution}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

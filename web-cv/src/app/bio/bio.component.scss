@@ -1,0 +1,54 @@
+.bio {
+    padding: 0.5rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline {
+    overflow: auto;
+    padding: 1rem 2rem;
+}
+
+.timeline-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.half-height {
+    height: 50%;
+}
+
+.bio-timeline-container {
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.circle {
+    background-color:darkgoldenrod;
+    text-align: center;
+    color: whitesmoke;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-horizontal {
+    width: 200px;
+    height: 10px;
+}
+
+.line-vertical {
+    width: 10px;
+    height: 200px;
+}
+
+.line {
+    background-color: green;
+}
