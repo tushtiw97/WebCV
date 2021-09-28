@@ -1,0 +1,23 @@
+.contact-container {
+    background-color: whitesmoke;
+    transition: opacity 0.5s;
+}
+
+.contact-div {
+    box-shadow: -5px 10px 5px darkgray;
+    height: calc(100% - 5rem);
+    max-height: calc(100% - 5rem);
+    width: 100%;
+    background-color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.skills-div::-webkit-scrollbar {
+    display: none;
+}

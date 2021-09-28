@@ -1,7 +1,7 @@
 <div [ngStyle]="{height: componentHeightCssString, 'opacity': applyTransition ? 1 : 0}" class="container-fluid projects-container" *ngIf="componentInitialized">
     <div class="row scrollable-container">
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" *ngFor="let item of projectsAndCertifications">
-            <div class="card bg-secondary mb-3" style="width: 100%">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 1rem; " *ngFor="let item of projectsAndCertifications">
+            <div class="card bg-secondary mb-3" style="width: 100%; height: 100%;">
                 <div class="card-header">{{item.name}}</div>
                 <div class="card-body">
                     <h4 class="card-title">{{item.startYear ? item.startYear + ' -' : ''}} {{item.endYear}}</h4>
